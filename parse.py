@@ -27,7 +27,7 @@ def fetch(url):
                         proxy != None) else urllib2.build_opener()
             urllib2.install_opener(opener)
 
-            t = urllib2.urlopen(url, timeout=10).read()
+            t = urllib2.urlopen(url, timeout=4).read()
             GOOD_PROXY += [PROXY_LIST[PROXY_INDEX],]
             fok.write(PROXY_LIST[PROXY_INDEX] + '\n')
             fok.flush()
